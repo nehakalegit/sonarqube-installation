@@ -4,6 +4,7 @@ sudo yum update -y
 ## **STEP 2: Install Java 17**
 bash
 sudo yum install java-17-openjdk -y
+
 java -version
 ## **STEP 3: Install PostgreSQL**
 // postgresql-server and postgresql these are two separate packages. Postgresql - Client tools only-psql (CLI client), pg_dump, pg_restore, createdb, dropdb, Client libraries
