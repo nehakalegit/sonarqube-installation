@@ -11,12 +11,12 @@ java -version
 //Even though sonarqube server have default database,it is not used in real production environment. New database is created//
 
 sudo yum install postgresql-server postgresql -y 
-sudo postgresql-setup initdb
-sudo systemctl start postgresql
-sudo systemctl enable postgresql
-```
 
----
+sudo postgresql-setup initdb
+
+sudo systemctl start postgresql
+
+sudo systemctl enable postgresql
 
 ## **STEP 4: Create SonarQube database & user**
 
