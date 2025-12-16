@@ -9,6 +9,7 @@ java -version
 // postgresql-server and postgresql these are two separate packages. Postgresql - Client tools only-psql (CLI client), pg_dump, pg_restore, createdb, dropdb, Client libraries
 //Postgresl-server - The actual database server, postgres daemon(for setting username and password), initdb, Systemd service files, Default data directory setup//
 //Even though sonarqube server have default database,it is not used in real production environment. New database is created//
+
 sudo yum install postgresql-server postgresql -y 
 sudo postgresql-setup initdb
 sudo systemctl start postgresql
