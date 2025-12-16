@@ -1,32 +1,15 @@
-Got it! Here’s the **easiest manual way to install SonarQube with PostgreSQL** on a **Red Hat (RHEL) EC2 instance**. I’ll keep it **step-by-step and minimal**.
-
----
-
-# ✅ **SonarQube + PostgreSQL on Red Hat EC2**
-
----
-
+Got it! Here’s the **easiest manual way to install SonarQube with PostgreSQL** on a **Red Hat (RHEL) EC2 instance**. Sonarqube to run requires atleast 2GB RAM - t2.small
 ## **STEP 1: Update system**
-
-```bash
 sudo yum update -y
-```
-
----
-
 ## **STEP 2: Install Java 17**
-
-```bash
+bash
 sudo yum install java-17-openjdk -y
 java -version
-```
-
----
-
 ## **STEP 3: Install PostgreSQL**
-
-```bash
-sudo yum install postgresql-server postgresql-contrib -y
+// postgresql-server and postgresql these are two separate packages. Postgresql - Client tools only-psql (CLI client), pg_dump, pg_restore, createdb, dropdb, Client libraries
+//Postgresl-server - The actual database server, postgres daemon(for setting username and password), initdb, Systemd service files, Default data directory setup//
+//Even though sonarqube server have default database,it is not used in real production environment. New database is created//
+sudo yum install postgresql-server postgresql -y 
 sudo postgresql-setup initdb
 sudo systemctl start postgresql
 sudo systemctl enable postgresql
